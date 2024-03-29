@@ -1,0 +1,16 @@
+function solution(s){
+    let regexp1 = /y/gi;
+    let regexp2 = /p/gi;
+    let arr1 = s.match(regexp1);
+    let arr2 = s.match(regexp2);
+    if(arr1===null || arr2===null){
+        return true;
+    }else{
+        if(arr1.length === arr2.length){
+        return true;
+    }  else {
+        return false
+    }
+}    
+    }
+    
