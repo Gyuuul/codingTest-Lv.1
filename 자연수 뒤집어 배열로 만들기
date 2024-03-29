@@ -1,0 +1,5 @@
+function solution(n) {
+    var answer = n.toString().split('');
+    answer= answer.reverse().map((item)=> Number(item));
+    return answer;
+}
