@@ -1,0 +1,5 @@
+function solution(arr, divisor) {
+    var num= arr.filter((item)=> item%divisor ===0).sort((a,b)=> a-b);
+    var answer= num.length ? num : [-1];
+    return answer;
+}
