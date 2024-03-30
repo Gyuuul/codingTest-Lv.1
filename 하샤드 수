@@ -1,0 +1,14 @@
+function solution(x) {
+    var answer = true;
+    var num= 0;
+    var arr= String(x);
+    for(let i=0; i<arr.length; i++){
+        num+=parseInt(arr[i]);
+    }
+    if(x%num===0){
+        answer=true;
+    }else{
+        answer= false;
+    }
+    return answer;
+}
