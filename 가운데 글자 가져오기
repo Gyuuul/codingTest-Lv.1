@@ -1,0 +1,11 @@
+function solution(s) {
+    var answer = '';
+    if(s.length % 2 ===0){
+        var num= s.length / 2;
+        answer= s[num-1]+s[num];
+    }else{
+        var idx= Math.floor(s.length / 2);
+        answer= s[idx];
+    }
+    return answer;
+}
