@@ -1,0 +1,14 @@
+function solution(n, m) {
+    var answer = [];
+    // 최대공약수
+    var max;
+    for(let i=1; i<=Math.max(n,m); i++){
+        if(Math.max(n,m)%i===0 && Math.min(n,m)%i===0){
+            max=i;
+        }
+    }
+    
+    // 최소공배수
+    answer= [max, n*m / max];    
+    return answer;
+}
