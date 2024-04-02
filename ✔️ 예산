@@ -1,7 +1,7 @@
 function solution(d,budget){
   var answer= 0;
   var num= 0;
-  d.sort().map((item)=>{
+  d.sort((a,b)=> a-b).map((item)=>{
     if((num+item) <= budget){
         num+=item;
         answer++;
