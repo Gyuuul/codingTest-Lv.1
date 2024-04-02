@@ -1,0 +1,11 @@
+function solution(s) {
+    var answer = '';
+    const handle=(word,idx)=>{
+      return idx%2===0 ? word.toUpperCase(): word.toLowerCase()
+    }
+    var arr=s.split(' ');
+    answer=arr.map((item)=>
+        item.split('').map((word,idx)=> handle(word,idx)
+        ).join('')).join(' ')
+    return answer;
+}
