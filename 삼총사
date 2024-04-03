@@ -1,0 +1,13 @@
+function solution(number) {
+    var answer = 0;
+    for(let i=0; i<number.length; i++){
+        for(let k=i+1; k<number.length; k++){
+            for(let n=k+1; n<number.length; n++){
+                if((number[i]+number[k]+number[n])===0){
+                    answer++;
+                }
+            }
+        }
+    }
+    return answer;
+}
