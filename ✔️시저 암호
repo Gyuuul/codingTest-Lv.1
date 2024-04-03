@@ -1,0 +1,13 @@
+function solution(s, n) {
+    var answer = s.split('').map((item)=>{
+        var words= item.charCodeAt();
+        if(97 <= words && words <= 122){
+            return String.fromCharCode((words+n-97)%26 +97);
+        }
+        if(65 <= words && words <= 90){
+            return String.fromCharCode((words+n-65)%26 +65)
+        }
+        return ' ';
+    }).join('');
+    return answer;
+}
