@@ -1,0 +1,22 @@
+function solution(sizes) {
+    var answer = 0;
+    // 제일큰 수를 먼저 찾고
+    // 배열 안에 있는 두 수 중에 작은 수 끼리 비교해서 제일 큰 수 찾기
+    var max='';
+    max=sizes.join(',').split(',').sort((a,b)=> a-b).slice(max.length-1).join('');
+    console.log(max)
+    
+    var arr= [];
+    for(let i=0; i<sizes.length; i++){
+        if(sizes[i][0] <= sizes[i][1]){
+            arr.push(sizes[i][0]);
+        }else{
+            arr.push(sizes[i][1]);
+        }
+    }
+    var min= arr.sort((a,b)=>a-b).slice(arr.length-1).join();    
+    console.log(min)
+    
+    answer= max*min;
+    return answer;
+}
