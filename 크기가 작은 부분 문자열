@@ -1,0 +1,14 @@
+function solution(t, p) {
+    var answer = 0;
+    var arr= t.split('');
+    var num= '';
+    var arr2=[];    
+    for(let i=0; i<arr.length; i++){
+        arr2.push(arr.join('').slice(i,i+p.length))
+    }
+    var newarr= arr2.filter((item)=>{
+        return item.length===p.length && item <= p;
+    })
+    console.log(newarr)
+    return answer=newarr.length;
+}
