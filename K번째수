@@ -1,0 +1,17 @@
+function solution(array, commands) {
+    var answer = [];
+    const newarr= [];
+    var num=[];
+    
+    for(let i=0; i<commands.length; i++){
+        newarr.push(array.slice(commands[i][0]-1, commands[i][1]).sort((a,b)=> a-b));
+        num.push(commands[i][2]-1);
+        
+    }
+    
+    newarr.forEach((item,i)=>
+        answer.push(item[num[i]])
+        )
+
+    return answer;
+}
