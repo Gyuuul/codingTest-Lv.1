@@ -1,0 +1,13 @@
+function solution(strings, n) {
+    var answer = [];
+    strings.sort((a,b)=>{
+        if(a[n] !== b[n]){
+            //a의 n번째 문자가 b의 n번째 문자보다 크다면 1을 반환하여 a를 b보다 뒤에 위치시킵니다.
+            return a[n] > b[n] ? 1 : -1;
+        }
+        // a의 n번째 문자와 b의 n번째 문자가 같다면 두 문자열 자체를 비교하여 사전순으로 정렬
+        return a > b ? 1 : -1;
+    })
+    
+    return strings;
+}
