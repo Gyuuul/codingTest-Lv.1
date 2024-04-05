@@ -1,0 +1,17 @@
+function solution(numbers) {
+    var answer = [];
+    var arr= [];
+    for(let i=0; i<numbers.length; i++){
+        for(let k= i+1; k<numbers.length; k++){
+            arr.push(numbers[i]+numbers[k]);
+            arr.sort((a,b)=>a-b);
+        }
+    }
+    for(let n=0; n<arr.length; n++){
+        if(arr[n] !== arr[n+1]){
+            answer.push(arr[n]);
+        }
+    }
+    console.log(arr)
+    return answer;
+}
