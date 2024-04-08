@@ -1,0 +1,18 @@
+function solution(food) {
+    var answer = '';
+    let arr= [];
+    for(let i=1; i<food.length; i++){
+        if(food[i] >= 2){
+            if(((food[i]%2)===1)||((food[i]%2)===0)){
+                arr.push(`${i}`.repeat(food[i]/2));
+            }
+        }
+    }
+    const str1= arr.join('');
+    const str2= arr.reverse().join('');
+    answer= str1+0+str2;
+    console.log(answer)
+    
+    
+    return answer;
+}
